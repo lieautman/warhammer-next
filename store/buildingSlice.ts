@@ -2,12 +2,13 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface Building {
-  id: string;
+  id: number;
   isRuild: boolean;
-  x_coord: Float16Array;
-  y_coord: Float16Array;
-  x_length: Float16Array;
-  y_length: Float16Array;
+  x_coord_left_corner: number;
+  y_coord_left_cornerd: number;
+  x_length: number;
+  y_length: number;
+  angle: number;
 }
 
 interface BuildingState {
