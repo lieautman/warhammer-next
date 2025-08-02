@@ -5,7 +5,7 @@ interface Building {
   id: number;
   isRuild: boolean;
   x_coord_left_corner: number;
-  y_coord_left_cornerd: number;
+  y_coord_left_corner: number;
   x_length: number;
   y_length: number;
   angle: number;
