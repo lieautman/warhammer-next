@@ -1,4 +1,3 @@
-// store/factionsSlice.ts
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface Building {
@@ -9,6 +8,7 @@ interface Building {
   x_length: number;
   y_length: number;
   angle: number;
+  hilight: boolean;
 }
 
 interface BuildingState {

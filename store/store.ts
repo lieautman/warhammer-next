@@ -1,9 +1,11 @@
 // store/store.ts
 import { configureStore } from '@reduxjs/toolkit';
-import buildingReducer from './buildingSlice';
+import buildingReducer from './slices/buildingSlice';
+import boardReducer from './slices/boardSlice';
 
 export const store = configureStore({
   reducer: {
+    board: boardReducer,
     building: buildingReducer,
   },
 });

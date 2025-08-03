@@ -1,4 +1,4 @@
-import { setBuilding } from '@/store/buildingSlice';
+import { setBuilding } from '@/store/slices/buildingSlice';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import { Button, Box, Input, Typography, Switch } from '@mui/material';
 import { Dispatch, SetStateAction, useEffect, useState } from 'react';
@@ -20,6 +20,7 @@ export default function Panel({ setPageOpened }: PanelProps) {
     x_length: 10,
     y_length: 10,
     angle: 0,
+    hilight: false
   });
 
   const handleAddBuilding = () => {
@@ -32,13 +33,14 @@ export default function Panel({ setPageOpened }: PanelProps) {
       y_coord_left_corner: 0,
       x_length: 10,
       y_length: 10,
-      angle: 0
+      angle: 0,
+    hilight: false
     });
   };
 
   useEffect(() => {
     console.log("buildings", buildings)
-  }, [buildings, dispatch])
+  }, [buildings])
 
   return (
     <Box display="flex" flexDirection="column" alignItems="center" gap={2}>
